@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        /* Define a CSS rule for label-fixed-width */
+        .label-fixed-width {
+            width: 200px; /* Adjust the width to your desired value */
+            display: inline-block; /* Ensures labels don't break onto new lines */
+        }
+    </style>
+
+    <title>User Characteristics</title>
+</head>
+<body>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">User Characteristics</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <!-- Favorite Cuisines -->
+                        <div class="form-group col-md-12">
+                            <label class="label-fixed-width" for="inputFavoriteCuisines">Favorite Cuisines</label>
+                            <div class="listOfTypes">
+                                <select name="FavoriteCuisines" class="form-control" id="inputFavoriteCuisines">
+                                    <option selected disabled>Choose Favorite Cuisines</option>
+                                    <option>Armenian Cuisine</option>
+                                    <option>Italian Cuisine</option>
+                                    <option>Mexican Cuisine</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Preferred Cooking Time -->
+                        <div class="form-group col-md-12">
+                            <label class="label-fixed-width" for="inputPreferredCookingTime">Preferred Cooking Time</label>
+                            <div class="listOfTypes">
+                                <select name="PreferredCookingTime" class="form-control" id="inputPreferredCookingTime">
+                                    <option selected disabled>Choose Preferred Cooking Time</option>
+                                    <option>Morning</option>
+                                    <option>Afternoon</option>
+                                    <option>Evening</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Favorite Food -->
+                        <div class="form-group col-md-12">
+                            <label class="label-fixed-width" for="inputFavoriteFood">Favorite Food</label>
+                            <div class="listOfTypes">
+                                <select name="FavoriteFood" class="form-control" id="inputFavoriteFood">
+                                    <option selected disabled>Choose Favorite Food</option>
+                                    <option>Vegan</option>
+                                    <option>Carnivore</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Next -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</body>
+</html>

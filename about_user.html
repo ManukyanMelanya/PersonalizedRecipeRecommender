@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        .form-control {
+        width: 200px;
+        border: 2px solid #ccc; /* Добавляем рамку */
+        border-radius: 4px; /* Закругляем углы */
+        background-color: #f8f9fa; /* Устанавливаем фоновый цвет */
+        padding: 6px 12px; /* Добавляем внутренний отступ */
+    }
+        .listOfTypes select {
+        width: 200px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f9fa;
+        padding: 6px 12px;
+    }
+        
+        #allergenProducts {
+            display: none; /* Изначально скрываем блок с текстом и списком аллергенных продуктов */
+        }
+    </style>
+    <title>About User</title>
+</head>
+<body>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">About User</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="inputweight">Weight</label>
+                            <input type="number" class="form-control" id="inputYourWieght" placeholder="Weight (kg)">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12 p-0">
+                        <label for="inputheight">Height</label>
+                        <input type="number" class="form-control" id="inputheight" placeholder="Height (m)">
+                    </div>
+                    <!--allergenProducts-->
+                    <div class="form-group col-md-12 p-0">
+                        <label for="inputDoYouHaveAllergy">Do you have allergy?</label>
+                        <div class="listOfTypes">
+                            <select name="Do you have allergy" class="listOfTypes" id="inputDoYouHaveAllergy">
+                                <option selected disabled>Choose</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div id="allergenProducts">
+                            <h5>Potentially Allergenic Products</h5>
+                            <ul id="allergenList">
+                                <div class="listOfTypes">
+                                    <select name="allergenList, class="listOfTypes">
+                                        <option selected disabled>Choose</option>
+                                        <option>Eggs</option>
+                                        <option>Shellfish</option>
+                                        <option>Peanuts</option>
+                                        <option>Other</option>
+
+                                    </select>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Next Button-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const selectElement = document.getElementById("inputDoYouHaveAllergy");
+
+            selectElement.addEventListener("change", function () {
+                const allergenProducts = document.getElementById("allergenProducts");
+
+                if (selectElement.value === "Yes") {
+                    allergenProducts.style.display = "block"; // Показываем блок при выборе "Yes"
+                } else {
+                    allergenProducts.style.display = "none"; // Скрываем блок при выборе "No"
+                }
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7h
